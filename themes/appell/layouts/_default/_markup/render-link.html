@@ -1,0 +1,7 @@
+{{- $href := .Destination -}}
+{{- $text := .Text -}}
+{{- $title := .Title -}}
+<a href="{{ $href }}"
+   {{- with $title }} title="{{ . }}"{{ end -}}
+   {{- if strings.HasPrefix $href "http" }} target="_blank" rel="noopener noreferrer nofollow"{{ end -}}
+>{{ $text | safeHTML }}</a>

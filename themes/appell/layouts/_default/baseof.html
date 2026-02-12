@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <script>
+    // Apply theme immediately to prevent flash
+    (function() {
+      const stored = localStorage.getItem('theme');
+      const theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }} – {{ .Site.Params.description }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{ with .Site.Params.ogImage }}
+  <meta property="og:image" content="{{ . | absURL }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  {{ end }}
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="{{ .Permalink }}">
+  <meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ .Site.Params.description }}">
+  {{ with .Site.Params.ogImage }}
+  <meta name="twitter:image" content="{{ . | absURL }}">
+  {{ end }}
+  
+  <!-- Additional Meta Tags -->
+  <meta name="author" content="{{ .Site.Title }}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ .Permalink }}">
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}">
+  <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+  <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}">
+  
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
+      <nav class="header-nav">
+        {{ if .IsHome }}
+        <a href="#unterstuetzende" class="nav-link nav-link--cta">Unterstützende</a>
+        {{ end }}
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="{{ "impressum/" | relURL }}">Impressum &amp; Datenschutz</a>
+        <span class="footer-sep">·</span>
+        <span>&copy; {{ now.Year }} {{ .Site.Title }}</span>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Farbmodus wechseln" title="Farbmodus wechseln">
+        <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀️</span>
+        <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">🌙</span>
+      </button>
+    </div>
+  </footer>
+
+  <script src="{{ "js/main.js" | relURL }}"></script>
+</body>
+</html>

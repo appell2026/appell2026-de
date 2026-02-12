@@ -1,0 +1,30 @@
+baseURL = 'https://appell2026.de'
+languageCode = 'de'
+title = 'appell2026.de'
+theme = 'appell'
+relativeURLs = true
+
+[minify]
+  [minify.tdewolff]
+    [minify.tdewolff.css]
+      keepCSS2 = true
+      precision = 0
+    [minify.tdewolff.html]
+      keepWhitespace = false
+    [minify.tdewolff.js]
+      keepVarNames = false
+      precision = 0
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.goldmark.parser]
+    autoHeadingIDType = 'github'
+    [markup.goldmark.parser.attribute]
+      block = true
+
+[params]
+  description = 'Appell für einen demokratischen und humanistischen Diskurs in den Medien'
+
+[taxonomies]

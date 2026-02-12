@@ -1,0 +1,7 @@
+name = "Appell"
+license = "MIT"
+description = "Custom theme for Appell 2026"
+min_version = "0.100.0"
+
+[author]
+  name = "Appell 2026"

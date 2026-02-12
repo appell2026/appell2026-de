@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="landing">
+  <div class="landing__content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Site.Data.supporters.supporters }}
+  <section class="supporters" id="unterstuetzende">
+    <h2>Unterstützende</h2>
+    <p class="supporters__count">Es haben {{ len .Site.Data.supporters.supporters }} Menschen und Organisationen diesen Appell unterzeichnet.</p>
+    <ul class="supporters__list">
+      {{ range .Site.Data.supporters.supporters }}
+      <li class="supporters__item">
+        <span class="supporters__name">{{ .name }}</span>
+        {{ with .title }}<span class="supporters__title">{{ . }}</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  <section class="cta">
+    <div class="cta__box">
+      <p class="cta__text">Mitzeichnen unter <a href="mailto:kontakt@appell2026.de" class="cta__link">kontakt@appell2026.de</a></p>
+    </div>
+  </section>
+</article>
+{{ end }}
