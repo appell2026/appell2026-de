@@ -16,7 +16,8 @@ Gontardstraße 11
 VAT-ID: DE272936681
 
 Geschäftsführer: Silvio Duwe  
-Registergericht: Stendal Handelsregister: HRB27447  
+Registergericht: Stendal  
+Handelsregister: HRB27447  
 
 **Kontakt:**
 
