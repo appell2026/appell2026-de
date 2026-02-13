@@ -6,7 +6,7 @@ date: 2026-02-11
 
 # Appell für einen demokratischen und humanistischen Diskurs in den Medien
 
-Mit Unverständnis haben wir zur Kenntnis genommen, dass die Redaktion der Talkshow „Caren Miosga" ihre aktuelle Ausgabe in der vergangen Woche unter dem Titel [„Ist Trump ein Vorbild für Deutschland, Herr Chrupalla?"](https://www.ndr.de/fernsehen/sendungen/caren-miosga/rueckschau/ist-trump-ein-vorbild-fuer-deutschland-herr-chrupalla,miosga-sendung-236.html) ankündigte.
+Mit Unverständnis haben wir zur Kenntnis genommen, dass die Redaktion der Talkshow „Caren Miosga" ihre aktuelle Ausgabe in der vergangenen Woche unter dem Titel [„Ist Trump ein Vorbild für Deutschland, Herr Chrupalla?"](https://www.ndr.de/fernsehen/sendungen/caren-miosga/rueckschau/ist-trump-ein-vorbild-fuer-deutschland-herr-chrupalla,miosga-sendung-236.html) ankündigte.
 
 Die Fragestellung und die Wahl des Gesprächspartners sind Ausdruck einer weiteren Normalisierung extrem rechter, autoritärer, demokratie- und menschenfeindlicher Positionen, die derzeit nicht nur im öffentlich-rechtlichen Rundfunk stattfindet.
 
