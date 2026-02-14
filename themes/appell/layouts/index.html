@@ -3,7 +3,11 @@
   <div class="landing__content">
     {{ .Content }}
   </div>
-
+  <section class="cta">
+    <div class="cta__box">
+      <p class="cta__text">Wenn Sie auch unterzeichnen möchten, schreiben Sie gern an <a href="mailto:kontakt@appell2026.de" class="cta__link">kontakt@appell2026.de</a>.</p>
+    </div>
+  </section>
   {{ if .Site.Data.supporters.supporters }}
   <section class="supporters" id="unterstuetzende">
     <h2>Unterstützende</h2>
@@ -18,11 +22,5 @@
     </ul>
   </section>
   {{ end }}
-
-  <section class="cta">
-    <div class="cta__box">
-      <p class="cta__text">Wenn Sie auch unterzeichnen möchten, schreiben Sie gern an <a href="mailto:kontakt@appell2026.de" class="cta__link">kontakt@appell2026.de</a>.</p>
-    </div>
-  </section>
 </article>
 {{ end }}
